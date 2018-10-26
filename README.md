@@ -39,11 +39,11 @@ If you don’t have a DigitalOcean account, [Register now](https://m.do.co/c/a9b
 
 ```
 # create nginx.conf with basic config and,
-docker-machine scp index.conf my-private-registry:/root/nginx-root/
+docker-machine scp nginx.conf my-private-registry:/root/
 
 # create an index.html file and,
 docker-machine ssh my-private-registry mkdir /root/nginx-root
-docker-machine scp index.conf my-private-registry:/root/nginx-root/
+docker-machine scp index.html my-private-registry:/root/nginx-root/
 
 # create docker-compose.yml for nginx service. and,
 eval $(docker-machine env my-private-registry)
