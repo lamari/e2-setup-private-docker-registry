@@ -46,6 +46,8 @@ docker-machine ssh my-private-registry mkdir /root/nginx-root
 docker-machine scp index.html my-private-registry:/root/nginx-root/
 
 # create docker-compose.yml for nginx service. and,
+docker-machine scp docker-compose.yml my-private-registry:/root/
+
 eval $(docker-machine env my-private-registry)
 env | grep DOCKER
 # verify the docker host which should be pointing to the public IP Address of the my-private-registry
